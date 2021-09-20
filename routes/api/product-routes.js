@@ -4,7 +4,7 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 // The `/api/products` endpoint
 
 // get all products
-router.get('/', async(req, res) => {
+router.get('/', async (req, res) => {
   // find all products
   try {
     const d = await Product.findAll({
@@ -46,7 +46,7 @@ router.get('/:id', async (req, res) => {
       ]
     })
     if(!d){
-      res.status(404).json({message: 'can not finf product ID'});
+      res.status(404).json({message: 'can not fin product ID'});
     }else {
       res.status(200).json(d);
     }
